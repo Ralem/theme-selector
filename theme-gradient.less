@@ -1,0 +1,35 @@
+a,
+.link {
+  font-style: italic;
+}
+button,
+.Button {
+  font-style: normal;
+  background: linear-gradient(-141deg, @brandColor3, @brandColor2);
+
+  &:hover {
+    background: linear-gradient(-141deg, @brandColor3, @brandColor1);
+  }
+}
+.Button--backward {
+  z-index: 1;
+  position: relative;
+  color: @brandColor2;
+  border: 0;
+  //   background: #fff;
+  //   background: transparent;
+  &:before {
+    z-index: -1;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #fff;
+  }
+}
+.Hero {
+  background: linear-gradient(141deg, @brandColor1, @brandColor2);
+}

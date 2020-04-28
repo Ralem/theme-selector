@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Less Theme</title>
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet/less"
+      type="text/css"
+      href="general.less"
+      title="default"
+    />
+    <script src="theme.js"></script>
+    <script>
+      less = {
+        env: "development",
+        globalVars: {
+          brandColor1: "#FF00BA",
+          brandColor2: "#3FC3D5",
+          brandColor3: "#2B87A0",
+        },
+      };
+    </script>
+    <script src="less.min.js"></script>
+  </head>
+  <body>
+    <main class="Project">
+      <section class="Hero Text-center">
+        <div class="Container Flex Flex-center Flex-middle">
+          <div class="Wrapper">
+            <h1 class="Title">I'm the Title</h1>
+            <p class="Subtitle Hero-subtitle">
+              You only have 3 seconds for customers to either stay or leave your
+              website. Make your headline clear and concise, and use this
+              <a href="">sub-headline</a> as a duck description
+            </p>
+            <form class="EmailInput">
+              <div class="Container Flex">
+                <input type="text" class="EmailInput-input" />
+                <button class="EmailInput-button" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="Category">
+        <div class="Container Flex Flex-center">
+          <div class="Wrapper Flex">
+            <div class="Category-image">
+              <img
+                src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&h=400&w=570&fit=crop&ixid=eyJhcHBfaWQiOjkxMjQwfQ"
+              />
+            </div>
+            <div class="Category-info">
+              <p class="Category-label">Category</p>
+              <p class="Category-title">General Content Section</p>
+              <p class="Category-text">
+                You can use this as a multi-purpose section. Describe your
+                product or service, write about your company or anything you
+                want.
+              </p>
+              <a href="" class="Button Button--backward">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="Project-controls">
+        <div class="Container">
+          <div class="Flex">
+            <div class="Project-controls-colors">
+              <div class="Flex">
+                <div class="ColorPicker">
+                  <input
+                    class="ColorPicker-input"
+                    data-less-variable="brandColor1"
+                    type="color"
+                    value="#FF00BA"
+                  />
+                </div>
+                <div class="ColorPicker">
+                  <input
+                    class="ColorPicker-input"
+                    data-less-variable="brandColor2"
+                    type="color"
+                    value="#3FC3D5"
+                  />
+                </div>
+                <div class="ColorPicker">
+                  <input
+                    class="ColorPicker-input"
+                    data-less-variable="brandColor3"
+                    type="color"
+                    value="#2B87A0"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="DividerVertical"></div>
+            <div class="Project-controls-themes">
+              <select name="theme" id="theme-selector">
+                <option value="theme">Pill</option>
+                <option value="theme-shadows">Material</option>
+                <option value="theme-gradient">Gradients</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
